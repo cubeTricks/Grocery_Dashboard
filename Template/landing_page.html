@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  
+  	h2 {
+  color:#185163;
+  text-align:left;
+  font-family: Monaco, Monospace;
+  font-size:30px;
+  height:50px;
+}
+
+  	h3 {
+  color:#185163;
+  text-align:left;
+  font-family: Monaco, Monospace;
+  font-size:20px;
+  height:50px;
+}
+
+span {
+    color:#1b0b47;
+  text-align:center;
+  font-family: Monaco, Monospace;
+  font-size:20px;
+  height:50px;
+}
+
+
+
+  body { 
+    font: 14px/1.4 Georgia, Serif; 
+	background:url({{url_for('static',filename='img/1.jpg')}}) center/cover no-repeat  fixed;
+  }
+  
+  /* 
+  Generic Styling, for Desktops/Laptops 
+  */
+  table { 
+    width: 100%; 
+    border-collapse: collapse; 
+	 background: rgba(100, 100, 100, 0.5);
+  }
+  /* Zebra striping */
+  tr:nth-of-type(odd) { 
+    background-color: #07383d;
+  }
+
+   th { 
+    padding: 6px; 
+	font-weight: bold; 
+    border: 1px solid #9B9B9B; 
+    text-align: left; 
+	color:white;
+	background-color:#07383d;
+  }
+    td { 
+    padding: 6px; 
+    border: 1px solid #9B9B9B; 
+    text-align: left; 
+	color:white;
+	
+  }
+  
+
+  @media 
+  only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px)  {
+    table, thead, tbody, th, td, tr { display: block; }
+    thead tr { position: absolute;top: -9999px;left: -9999px;}
+    tr { border: 1px solid #9B9B9B; }
+    td { border: none;border-bottom: 1px solid #9B9B9B; position: relative;padding-left: 50%; }
+    
+    td:before { position: absolute;top: 6px;left: 6px;width: 45%; padding-right: 10px; white-space: nowrap;}
+    
+
+  
+  /* Smartphones (portrait and landscape) ----------- */
+  @media only screen
+  and (min-device-width : 320px)
+  and (max-device-width : 480px) {
+    body { 
+      padding: 0; 
+      margin: 0; 
+      width: 320px; }
+    }
+  
+  /* iPads (portrait and landscape) ----------- */
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    body { 
+      width: 495px; 
+    }
+  }
+   #footer {
+            position: fixed;
+            padding: 10px 10px 0px 10px;
+            bottom: 0;
+            width: 100%;
+            /* Height of the footer*/ 
+            height: 40px;
+            background: grey;
+			align:left;
+        }
+		
+
+  
+
+  
+  </style>
+</head>
+<body>
+<br></br>
+
+<br></br>
+<div>
+<body>
+	<h2>Hi {{current_user}}  What you want to do :)</h2>
+    <h3><a href="{{ url_for('refill') }}">Click to Refill !</a></h3></p>
+	<h3><a href="{{ url_for('existing_list') }}">Click to view existing Groceries List !</a></h3>
+	<h3><a href="{{ url_for('consumption') }}">Click to know your Consumption!</a></h3>
+	</p>
+</body>
+<br></br>
+<br></br>
+
+
+</div>
+<footer style='color:#1b0b47'>Designed with help from Google and Stackoverflow :) :)  Planet Green.
+                  </footer>
+</body>
+</html>

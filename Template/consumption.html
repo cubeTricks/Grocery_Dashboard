@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+
+</style>
+ <h3><a href="{{ url_for('landing_page') }}">Home Page</a></h3>
+ 
+
+<h2 style='text-align:center'>Grocery Dash Board</h2>
+<body>
+<table>
+<tr>
+    <th>ITEM_NO</th>
+    <th>ITEM_NAME</th>
+    <th>CONSUMPTION_IN_DAYS</th>
+	<th>NEXT_BUY_DATE</th>
+  </tr>
+{% for item in products_list %}
+<tr><td>{{item.product_id}}</td><td>{{item.product_name}}</td><td>{{item.consumption}}</td><td>{{item.next_buy_date}}</td>
+{% endfor %}
+</table>
+
+ <h3><a href="{{ url_for('landing_page') }}">Home Page</a></h3>
+ </body>
+ </html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  
+  	h2 {
+  color:#185163;
+  text-align:left;
+  font-family: Monaco, Monospace;
+  font-size:30px;
+  height:50px;
+}
+
+  	h3 {
+  color:#185163;
+  text-align:left;
+  font-family: Monaco, Monospace;
+  font-size:20px;
+  height:50px;
+}
+
+span {
+    color:#1b0b47;
+  text-align:center;
+  font-family: Monaco, Monospace;
+  font-size:20px;
+  height:50px;
+}
+
+
+
+
+
+  body { 
+    font: 14px/1.4 Georgia, Serif; 
+	background:url({{url_for('static',filename='img/1.jpg')}}) center/cover no-repeat  fixed;
+	background-color:white;
+  }
+  
+  div{
+	width:1400px;
+    height: 768px;
+	background-color: None;
+	position: relative;
+	animation-name: example;
+	animation-delay: 2s;
+	animation-duration: 15s;
+  }
+  
+  #k3{
+	position: fixed;
+	left: 750px;
+	top: 30px;
+	
+	font-style: oblique;
+	font-weight: bold;
+	font-size: 20px;
+  }
+  
+    #k4{
+	position: fixed;
+	left: 550px;
+	top: 250px;
+	
+	font-style: oblique;
+	font-weight: bold;
+	font-size: 20px;
+  }
+  
+    #k5{
+	position: fixed;
+	left: 350px;
+	top: 470px;
+	
+	font-style: oblique;
+	font-weight: bold;
+	font-size: 20px;
+  }
+  
+      #k6{
+	position: fixed;
+	left: 90px;
+	top: 280px;
+	
+	font-style: oblique;
+	font-weight: bold;
+	font-size: 25px;
+  }
+
+          #k7{
+	position: fixed;
+	left: 40px;
+	top: 330px;
+	
+	font-style: oblique;
+	font-weight: bold;
+	font-size: 12px;
+  }
+  
+    #k8{
+	position: fixed;
+	left: 75px;
+	top: 30px;
+	
+	font-style: oblique;
+	font-weight: bold;
+	font-size: 20px;
+  }
+  @keyframes example {
+	0% {background-color:None; left:0px; top:0px;}
+	25% {background-color:#8aedac; left:700px; top:0px;}
+	50% {background-color:#8aedac; left:500px; top:220px;}
+	75% {background-color:#8aedac; left:300px; top:440px;}
+	100% {background-color:None; left:0px; top:0px;}
+  }
+  
+  /* 
+  Generic Styling, for Desktops/Laptops 
+  */
+  table { 
+    width: 100%; 
+    border-collapse: collapse; 
+	 background: rgba(100, 100, 100, 0.5);
+  }
+  /* Zebra striping */
+  tr:nth-of-type(odd) { 
+    background-color: #07383d;
+  }
+
+   th { 
+    padding: 6px; 
+	font-weight: bold; 
+    border: 1px solid #9B9B9B; 
+    text-align: left; 
+	color:white;
+	background-color:#07383d;
+  }
+    td { 
+    padding: 6px; 
+    border: 1px solid #9B9B9B; 
+    text-align: left; 
+	color:white;
+	
+  }
+  
+
+  @media 
+  only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px)  {
+    table, thead, tbody, th, td, tr { display: block; }
+    thead tr { position: absolute;top: -9999px;left: -9999px;}
+    tr { border: 1px solid #9B9B9B; }
+    td { border: none;border-bottom: 1px solid #9B9B9B; position: relative;padding-left: 50%; }
+    
+    td:before { position: absolute;top: 6px;left: 6px;width: 45%; padding-right: 10px; white-space: nowrap;}
+    
+
+  
+  /* Smartphones (portrait and landscape) ----------- */
+  @media only screen
+  and (min-device-width : 320px)
+  and (max-device-width : 480px) {
+    body { 
+      padding: 0; 
+      margin: 0; 
+      width: 320px; }
+    }
+  
+  /* iPads (portrait and landscape) ----------- */
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    body { 
+      width: 495px; 
+    }
+  }
+   #footer {
+            position: fixed;
+            padding: 10px 10px 0px 10px;
+            bottom: 0;
+            width: 100%;
+            /* Height of the footer*/ 
+            height: 40px;
+            background: grey;
+			align:left;
+        }
+		
+
+  
+
+  
+  </style>
+
+</head>
+
+<body>
+<div>
+	<h2>>></h2>
+	<span id="k6">Welcome to Grocery Dashboard</span>
+	 <span id="k3"><a style="color:black" id="nolink"> Fill/Refil !</a></span>
+	<span id="k4"><a style="color:black" id="nolink">View existing Groceries List !</a></span>
+	<span id="k5"><a style="color:black" id="nolink">Know your Consumption!</a></span>
+	<span id="k8"><a style="color:black" id="nolink" href="{{ url_for('user_login') }}"> Login</a></span>
+	
+
+</div>	
+<p text-align="center">
+	
+	</p>
+</body>
+
+<br></br>
+<br></br>
+
+</html>
